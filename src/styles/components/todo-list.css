@@ -1,0 +1,120 @@
+body {
+  background-color: rgba(22, 129, 129, 0.85);
+}
+
+.MuiButtonBase-root {
+  transition: none !important;
+}
+
+.container {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.35);
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1760px) {
+  .container {
+    width: 30%;
+  }
+}
+
+.todo-list-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  padding: 3rem;
+}
+
+.todo-list-title {
+  margin: 1rem;
+  font-size: 2.4rem;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-height: 50vh;
+  padding-right: 0.6rem;
+  overflow-y: scroll;
+}
+
+.tasks-list::-webkit-scrollbar {
+  width: 0.5rem;
+  background: transparent;
+}
+
+.tasks-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(27, 131, 131);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: white;
+}
+
+.task-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.task-details {
+  line-break: anywhere;
+  font-weight: 400;
+}
+
+.task-action-buttons {
+  display: flex;
+  gap: 0.4rem;
+  margin-left: 1rem;
+}
+
+.task-action-buttons button {
+  background-color: white;
+  color: rgb(17, 67, 67);
+  border-radius: 10rem;
+}
+
+.completed-task .task-title {
+  text-decoration: line-through;
+  text-decoration-color: rgb(17, 67, 67);
+  text-decoration-thickness: 0.1rem;
+}
+
+.completed-task .complete-task-btn {
+  background-color: rgb(17, 67, 67) !important;
+  color: white !important;
+}
+
+.add-task {
+  width: 88%;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.add-task-input {
+  width: -webkit-fill-available;
+}
+
+.add-task-button {
+  background-color: rgb(27, 131, 131) !important;
+  font-weight: 600 !important;
+}
