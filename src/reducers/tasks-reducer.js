@@ -7,7 +7,7 @@ export default function tasksReducer(currentTasks, action) {
     const index = tasksTemp.findIndex((task) => task.id === id);
     tasksTemp[index] = {
       ...tasksTemp[index],
-      isCompleted: !tasksTemp[index].isCompleted,
+      isCompleted: !tasksTemp[index]?.isCompleted,
     };
     localStorage.setItem("tasks", JSON.stringify(tasksTemp));
     return tasksTemp;
@@ -45,7 +45,7 @@ export default function tasksReducer(currentTasks, action) {
       const updatedTasks = [
         ...currentTasks,
         {
-          id: currentTasks[currentTasks.length - 1].id + 1,
+          id: currentTasks[currentTasks.length - 1]?.id + 1 || 0,
           title: addedTaskTitle,
           details: "",
         },
